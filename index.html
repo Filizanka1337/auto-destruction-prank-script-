@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>auto destruction code</title>
+    <style>
+        /* cspell:disable-file */
+        /* webkit printing magic: print all background colors */
+        html {
+            -webkit-print-color-adjust: exact;
+        }
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        @media only screen {
+            body {
+                margin: 2em auto;
+                max-width: 900px;
+                color: #000000; /* Zmiana koloru tekstu na czarny */
+            }
+        }
+
+        body {
+            background-color: #3b3b3b; /* Zmiana koloru tła strony */
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        article {
+            background-color: #ffffff; /* Tło artykułu */
+            padding: 20px;
+            border-radius: 8px; /* Zaokrąglenie rogów artykułu */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Dodanie cienia */
+            margin-bottom: 20px; /* Dodanie marginesu dolnego */
+        }
+
+        h1 {
+            color: #3498db; /* Kolor nagłówka */
+            margin-top: 0; /* Usunięcie domyślnego marginesu nagłówka */
+            font-size: 2em; /* Zwiększenie rozmiaru czcionki */
+        }
+
+        figure.image {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%; /* Utrzymaj obraz w ramach kontenera */
+            border-radius: 8px; /* Zaokrąglenie rogów obrazu */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Dodanie cienia */
+        }
+
+        button {
+            background-color: #3498db; /* Kolor przycisku */
+            color: #ffffff; /* Kolor tekstu na przycisku */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Pozostała część stylów */
+    </style>
+</head>
+<body>
+    <article id="0ce93854-d5cd-4ef8-853b-454b59341b69" class="page sans">
+        <header>
+            <h1 class="page-title">auto destruction code</h1>
+            <p class="page-description"></p>
+        </header>
+        <div class="page-body">
+            <!-- Pozostałe elementy kodu -->
+            <p id="d75c72bc-32e9-41ea-891e-57562256dbee" class="">an silly code idk why i made it </p>
+            <!-- Pozostałe akapity -->
+            <h1 id="e96df11a-3112-460f-bc1f-d5511650cf61" class="">Screen Shot how it looks:</h1>
+            <figure id="7563ede2-65ee-4ce3-93da-d7bad3e77bab" class="image">
+                <img style="width: 1170px" src="data/ss.png"/> <!-- Zmiana źródła zdjęcia -->
+            </figure>
+            <!-- Pozostałe akapity i elementy -->
+            <h1 id="877c894b-b0a5-4752-b47c-d75412fab3e9" class="">Download link:</h1>
+            <button id="downloadBtn" onclick="downloadFile()">Pobierz del.py</button>
+            <script>
+                function downloadFile() {
+                    var link = document.createElement("a");
+                    link.href = "data/del.py";
+                    link.download = "del.py";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            </script>
+            <!-- Pozostałe akapity -->
+            <h1 id="08bf8d2f-82e5-4ae4-8fcc-7d1f2e503172" class="">Video how it works:</h1>
+            <video width="640" height="360" controls>
+                <source src="data/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Pozostałe akapity -->
+        </div>
+    </article>
+    <span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+</html>
